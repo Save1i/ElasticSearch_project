@@ -46,7 +46,7 @@ export const MainPage = () => {
     try {
 
       const res = await fetch(
-        `${import.meta.env.VITE_LOCAL_URL}/api/_search?value=${med1}`
+        `${import.meta.env.VITE_SERVER_URL}/api/_search?value=${med1}`
       );
       const data = await res.json();
       if (Array.isArray(data) && med1) {
@@ -65,7 +65,7 @@ export const MainPage = () => {
     try {
 
       const res = await fetch(
-        `${import.meta.env.VITE_LOCAL_URL}/api/_search?value=${med2}`
+        `${import.meta.env.VITE_SERVER_URL}/api/_search?value=${med2}`
       );
       const data = await res.json();
       if (Array.isArray(data) && med2) {
