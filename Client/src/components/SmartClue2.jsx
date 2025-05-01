@@ -1,5 +1,5 @@
 import React from 'react'
-import "../styles/SmartClue.css"
+import "../styles/smartClue.css"
 
 const SmartClue2 = ({promt, setMed2, setActive2}) => {
   if (!promt || promt.length === 0) return null;
