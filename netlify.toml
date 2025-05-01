@@ -7,7 +7,7 @@
   framework = "vite"
 
 [[redirects]]
-  from = "/*"
+  from = "api/*"
   to = "https://elasticsearchproject-server-production.up.railway.app/api/:splat"
   status = 200
   force = true
