@@ -44,35 +44,41 @@ export const MainPage = () => {
 
   const elasticSearch = async () => {
     try {
-      const res = await fetch(`/api/_search?value=${med1}`);
+
+      const res = await fetch(
+        `${import.meta.env.VITE_SERVER_URL}/api/_search?value=${med1}`
+      );
       const data = await res.json();
       if (Array.isArray(data) && med1) {
         setPromt1(data);
       } else {
         setPromt1([]);
       }
-      console.log(data);
+
+      console.log(data)
     } catch (error) {
-      console.log(error);
+      console.log(error)
     }
-}
-
-
-const elasticSearch2 = async () => {
-  try {
-    const res = await fetch(`/api/_search?value=${med2}`);
-    const data = await res.json();
-    if (Array.isArray(data) && med2) {
-      setPromt2(data);
-    } else {
-      setPromt2([]);
-    }
-    console.log(data);
-  } catch (error) {
-    console.log(error);
   }
-}
 
+  const elasticSearch2 = async () => {
+    try {
+
+      const res = await fetch(
+        `${import.meta.env.VITE_SERVER_URL}/api/_search?value=${med2}`
+      );
+      const data = await res.json();
+      if (Array.isArray(data) && med2) {
+        setPromt2(data);
+      } else {
+        setPromt2([]);
+      }
+
+      console.log(data)
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
   const checkInteraction = async () => {
     setError("");

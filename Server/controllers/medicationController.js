@@ -2,7 +2,7 @@ const { Medication, Compatibility } = require("../models/models");
 
 class MedicationController {
     async getMedication(req, res) {
-        const { med1, med2 } = req.query;
+        const { med1, med2 } = req.query.value;
 
   if (!med1 || !med2) {
     return res.status(400).json({ error: "Укажите параметры med1 и med2" });
