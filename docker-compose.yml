@@ -15,7 +15,7 @@ services:
     build:
       context: ./Client
       args:
-        VITE_SERVER_URL: https://elasticsearchproject-server-production.up.railway.app
+        VITE_SERVER_URL: https://skillful-exploration-production.up.railway.app
     ports:
       - "80:80"
     depends_on:

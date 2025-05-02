@@ -1,0 +1,29 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+.env
+
+# Vite
+dist/
+
+# Docker
+*.local
+Dockerfile.dev
+docker-compose.override.yml
+
+# System
+.DS_Store
+Thumbs.db
+
+# Logs
+logs
+*.log
+logs/**/*.log
+
+# VS Code
+.vscode/
+
+# Optional: PostgreSQL dump, SQLite, etc.
+*.sqlite
+*.dump
