@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  backend:
+    image: med_backend
+    build:
+      context: ./Server
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+
+  frontend:
+    image: med_front
+    build:
+      context: ./Client
+      args:
+        VITE_SERVER_URL: https://elasticsearchproject-server-production.up.railway.app
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    env_file:
+      - .env
