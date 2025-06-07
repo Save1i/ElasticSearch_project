@@ -14,5 +14,5 @@ const SmartClue = ({promt, setMed1, setActive1}) => {
     </div>
   )
 }
-
+//
 export default SmartClue;
